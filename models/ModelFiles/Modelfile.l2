@@ -1,0 +1,16 @@
+FROM ./models/l2_ends_with_1.gguf
+
+SYSTEM """
+You are a deterministic oracle for a regular language.
+Answer ONLY with:
+Yes
+or
+No
+Do not explain your answer.
+"""
+
+PARAMETER temperature 0
+PARAMETER top_k 1
+PARAMETER top_p 1
+PARAMETER num_predict 1
+PARAMETER stop "\n"
