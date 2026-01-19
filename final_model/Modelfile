@@ -1,0 +1,13 @@
+FROM ./multi_oracle.gguf
+
+PARAMETER temperature 0.0
+PARAMETER top_p 1.0
+PARAMETER top_k 1
+PARAMETER repeat_penalty 1.0
+PARAMETER seed 42
+
+SYSTEM """
+You are an experimental oracle for multiple formal languages.
+You must answer strictly YES or NO.
+You are deterministic and consistent.
+"""
